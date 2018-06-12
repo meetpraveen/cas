@@ -7,7 +7,40 @@
     <artifactId>cas-overlay</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
+        <dependencies>
+                <dependency>
+                        <groupId>org.apereo.cas</groupId>
+                        <artifactId>cas-server-support-saml-idp</artifactId>
+                        <version>${cas.version}</version>
+                </dependency>
+                <dependency>
+                        <groupId>org.apereo.cas</groupId>
+                        <artifactId>cas-server-support-saml-sp-integrations</artifactId>
+                        <version>${cas.version}</version>
+                </dependency>
+        <dependency>
+          <groupId>org.apereo.cas</groupId>
+          <artifactId>cas-server-support-generic</artifactId>
+          <version>${cas.version}</version>
+        </dependency>
+                <dependency>
+                        <groupId>org.apereo.cas</groupId>
+                        <artifactId>cas-server-support-json-service-registry</artifactId>
+                        <version>${cas.version}</version>
+                </dependency>
+        </dependencies>
 
+        <dependencyManagement>
+                <dependencies>
+                        <dependency>
+                                <groupId>org.apereo.cas</groupId>
+                                <artifactId>cas-server-support-bom</artifactId>
+                                <version>${cas.version}</version>
+                                <type>pom</type>
+                                <scope>import</scope>
+                        </dependency>
+                </dependencies>
+        </dependencyManagement>
     <build>
         <plugins>
             <plugin>
